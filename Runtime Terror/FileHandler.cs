@@ -30,9 +30,9 @@ namespace Runtime_Terror
         // Method to print List to File, line by line... Specify filename
         public static void writeToFile(string filename, List<string> output)
         {
-            FileStream fileStream = File.OpenWrite(filename);
+            FileStream fileStream = new FileStream(filename, FileMode.Append, FileAccess.Write);
             StreamWriter writer = new StreamWriter(fileStream);
-
+            
             foreach (var line in output)
             {
                 writer.WriteLine(line);

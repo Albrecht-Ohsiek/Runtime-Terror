@@ -24,8 +24,8 @@ namespace Runtime_Terror
 
             }
             catch (Exception ex)
-            { 
-
+            {
+                MessageBox.Show(ex.Message);
             }
             finally 
             { 
@@ -35,7 +35,8 @@ namespace Runtime_Terror
 
         private void button_Register_Click(object sender, EventArgs e)
         {
-
+            Register registerForm = new Register();
+            registerForm.ShowDialog();
         }
     }
 }
