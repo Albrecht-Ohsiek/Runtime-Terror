@@ -16,7 +16,7 @@ namespace Runtime_Terror
         {
             InitializeComponent();
         }
-        string fileName = @"users.txt";
+        string filename = @"users.txt";
         private void button_Register_Click(object sender, EventArgs e)
         {
             
@@ -38,7 +38,7 @@ namespace Runtime_Terror
                     newUser.Add(user.Username = textBox_Username.Text);
                     newUser.Add(user.Password = textBox_Password.Text);
                     
-                    FileHandler.writeToFile(fileName, newUser);
+                    FileHandler.writeToFile(filename, newUser);
 
                     // TODO: check if user already exists.
 
