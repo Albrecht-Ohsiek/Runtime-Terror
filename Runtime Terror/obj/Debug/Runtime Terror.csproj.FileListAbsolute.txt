@@ -1,0 +1,11 @@
+C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\bin\Debug\Runtime Terror.exe.config
+C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\bin\Debug\Runtime Terror.exe
+C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\bin\Debug\Runtime Terror.pdb
+C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runtime Terror.csproj.AssemblyReference.cache
+C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runtime Terror.csproj.SuggestedBindingRedirects.cache
+C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runtime_Terror.LoginForm.resources
+C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runtime_Terror.Properties.Resources.resources
+C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runtime Terror.csproj.GenerateResource.cache
+C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runtime Terror.csproj.CoreCompileInputs.cache
+C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runtime Terror.exe
+C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runtime Terror.pdb

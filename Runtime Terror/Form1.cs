@@ -10,11 +10,32 @@ using System.Windows.Forms;
 
 namespace Runtime_Terror
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
+        }
+
+        private void button_Login_Click(object sender, EventArgs e)
+        {
+            try 
+            { 
+
+            }
+            catch (Exception ex)
+            { 
+
+            }
+            finally 
+            { 
+
+            }
+        }
+
+        private void button_Register_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
