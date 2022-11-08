@@ -21,11 +21,26 @@ namespace Runtime_Terror
         {
             try 
             { 
+                if(LoginAuth.passCheck(textBox_Username.Text, textBox_Password.Text) == true)
+                {
+                    MessageBox.Show("LOGIN SUCCESSFUL");
+                    textBox_Username.Clear();
+                    textBox_Password.Clear();
 
+                    FormDataCapture formDataCapture = new FormDataCapture();
+                    formDataCapture.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("USERNAME OR PASSWORD INCORRECT");
+                    textBox_Username.Clear();
+                    textBox_Password.Clear();
+                }
             }
             catch (Exception ex)
             { 
-
+                MessageBox.Show(ex.Message);
             }
             finally 
             { 
