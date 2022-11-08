@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Runtime_Terror
 {
-    public partial class Form1 : Form
+    public partial class FormDataCapture : Form
     {
-        public Form1()
+        public FormDataCapture()
         {
             InitializeComponent();
         }
