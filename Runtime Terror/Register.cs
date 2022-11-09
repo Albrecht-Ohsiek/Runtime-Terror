@@ -16,7 +16,7 @@ namespace Runtime_Terror
         {
             InitializeComponent();
         }
-        string filename = @"C:\Users\DaleWillemse\Desktop\users.txt";
+        string filename = @"users.txt";
         private void button_Register_Click(object sender, EventArgs e)
         {
             
