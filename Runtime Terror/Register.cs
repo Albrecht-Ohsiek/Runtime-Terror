@@ -16,12 +16,14 @@ namespace Runtime_Terror
         {
             InitializeComponent();
         }
-        string filename = @"users.txt";
+        string filename = @"C:\Users\DaleWillemse\Desktop\users.txt";
         private void button_Register_Click(object sender, EventArgs e)
         {
             
             try
             {
+                List<string> users = FileHandler.readFromFile(filename);
+                
                 if (textBox_Username.Text == "" || textBox_Password.Text == "" || textBox_PasswordConfirm.Text == "")
                 {
                     MessageBox.Show("Please fill in all boxes.");
@@ -29,6 +31,12 @@ namespace Runtime_Terror
                 else if(textBox_Password.Text != textBox_PasswordConfirm.Text)
                 {
                     MessageBox.Show("Passwords do not match.");
+                }   
+                else if(users.Contains(textBox_Username.Text))
+                {
+                    MessageBox.Show("Username already exists.");
+                    textBox_Username.Clear();
+                    textBox_Username.Focus();
                 }
                 else
                 {
@@ -37,10 +45,10 @@ namespace Runtime_Terror
                     
                     newUser.Add(user.Username = textBox_Username.Text);
                     newUser.Add(user.Password = textBox_Password.Text);
-                    
-                    FileHandler.writeToFile(filename, newUser);
 
-                    // TODO: check if user already exists.
+                    FileHandler.writeToFile(filename, newUser);
+                    MessageBox.Show("Registration successful.");
+                    this.Close();
 
                 }
             }
