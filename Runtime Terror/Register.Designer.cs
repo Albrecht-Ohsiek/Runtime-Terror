@@ -99,9 +99,9 @@
             // 
             // button_Register
             // 
-            this.button_Register.Location = new System.Drawing.Point(221, 217);
+            this.button_Register.Location = new System.Drawing.Point(211, 215);
             this.button_Register.Name = "button_Register";
-            this.button_Register.Size = new System.Drawing.Size(75, 23);
+            this.button_Register.Size = new System.Drawing.Size(101, 31);
             this.button_Register.TabIndex = 11;
             this.button_Register.Text = "REGISTER";
             this.button_Register.UseVisualStyleBackColor = true;

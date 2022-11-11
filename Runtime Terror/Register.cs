@@ -16,23 +16,36 @@ namespace Runtime_Terror
         {
             InitializeComponent();
         }
-        string filename = @"users.txt";
+        
+        string filename = @"C:\Users\DaleWillemse\Desktop\users.txt";
+
         private void button_Register_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
+                Boolean existingUser = false;
                 List<string> users = FileHandler.readFromFile(filename);
-                
+
+
+                for (int i = 0; i < users.Count; i += 2)
+                {
+                    if (textBox_Username.Text == users[i])
+                    {
+                        existingUser = true;
+                        break;
+                    }
+                }
+
                 if (textBox_Username.Text == "" || textBox_Password.Text == "" || textBox_PasswordConfirm.Text == "")
                 {
                     MessageBox.Show("Please fill in all boxes.");
                 }
-                else if(textBox_Password.Text != textBox_PasswordConfirm.Text)
+                else if (textBox_Password.Text != textBox_PasswordConfirm.Text)
                 {
                     MessageBox.Show("Passwords do not match.");
-                }   
-                else if(users.Contains(textBox_Username.Text))
+                }
+                else if (existingUser)
                 {
                     MessageBox.Show("Username already exists.");
                     textBox_Username.Clear();
@@ -42,7 +55,7 @@ namespace Runtime_Terror
                 {
                     List<string> newUser = new List<string>();
                     User user = new User();
-                    
+
                     newUser.Add(user.Username = textBox_Username.Text);
                     newUser.Add(user.Password = textBox_Password.Text);
 
@@ -52,12 +65,12 @@ namespace Runtime_Terror
 
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
         private void button_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
