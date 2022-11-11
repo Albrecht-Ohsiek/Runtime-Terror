@@ -21,10 +21,25 @@ namespace Runtime_Terror
         {
             try 
             { 
+                if(LoginAuth.passCheck(textBox_Username.Text, textBox_Password.Text) == true)
+                {
+                    MessageBox.Show("LOGIN SUCCESSFUL");
+                    textBox_Username.Clear();
+                    textBox_Password.Clear();
 
+                    FormDataCapture formDataCapture = new FormDataCapture();
+                    formDataCapture.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("USERNAME OR PASSWORD INCORRECT");
+                    textBox_Username.Clear();
+                    textBox_Password.Clear();
+                }
             }
             catch (Exception ex)
-            {
+            { 
                 MessageBox.Show(ex.Message);
             }
             finally 
@@ -35,8 +50,7 @@ namespace Runtime_Terror
 
         private void button_Register_Click(object sender, EventArgs e)
         {
-            Register registerForm = new Register();
-            registerForm.ShowDialog();
+
         }
     }
 }
