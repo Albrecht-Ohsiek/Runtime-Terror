@@ -17,7 +17,7 @@ namespace Runtime_Terror
             InitializeComponent();
         }
         
-        string filename = @"C:\Users\DaleWillemse\Desktop\users.txt";
+        string filename = @"users.txt";
 
         private void button_Register_Click(object sender, EventArgs e)
         {
@@ -27,13 +27,12 @@ namespace Runtime_Terror
                 Boolean existingUser = false;
                 List<string> users = FileHandler.readFromFile(filename);
 
-
+                
                 for (int i = 0; i < users.Count; i += 2)
                 {
-                    if (textBox_Username.Text == users[i])
+                    if (users[i] == Encrypter.encryption(textBox_Username.Text))
                     {
                         existingUser = true;
-                        break;
                     }
                 }
 
@@ -56,8 +55,8 @@ namespace Runtime_Terror
                     List<string> newUser = new List<string>();
                     User user = new User();
 
-                    newUser.Add(user.Username = textBox_Username.Text);
-                    newUser.Add(user.Password = textBox_Password.Text);
+                    newUser.Add(Encrypter.encryption(user.Username = textBox_Username.Text));
+                    newUser.Add(Encrypter.encryption(user.Password = textBox_Password.Text));
 
                     FileHandler.writeToFile(filename, newUser);
                     MessageBox.Show("Registration successful.");

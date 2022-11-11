@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Runtime_Terror
 {
@@ -10,29 +11,19 @@ namespace Runtime_Terror
     {
         public static bool passCheck(string username, string password)
         {
-            List<string> list = new List<string>();
-            list = FileHandler.readFromFile("users.txt");
+            bool passCheck = false;
+            string filename = @"users.txt";
+            List<string> users = FileHandler.readFromFile(filename);
 
-            List<User> users = new List<User>();
-            foreach (var item in list)
+            for (int i = 0; i < users.Count; i += 2)
             {
-                string[] text = item.ToString().Split(' ');
-
-                User user = new User();
-                user.Username = text[0];
-                user.Password = text[1];
-                users.Add(user);
-            }
-
-            foreach (var item in users)
-            {
-                if (item.Username == Encrypter.encryption(username) && item.Password == Encrypter.encryption(password))
+                if (users[i] == Encrypter.encryption(username) && users[i + 1] == Encrypter.encryption(password))
                 {
-                    return true;
+                    passCheck = true;
                 }
             }
 
-            return false;
+            return passCheck;
         }
                
     }

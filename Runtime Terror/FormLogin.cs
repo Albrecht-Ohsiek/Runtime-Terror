@@ -21,11 +21,9 @@ namespace Runtime_Terror
         {
             try 
             { 
-                if(LoginAuth.passCheck(textBox_Username.Text, textBox_Password.Text) == true)
+                if(LoginAuth.passCheck(textBox_Username.Text, textBox_Password.Text))
                 {
                     MessageBox.Show("LOGIN SUCCESSFUL");
-                    textBox_Username.Clear();
-                    textBox_Password.Clear();
 
                     FormDataCapture formDataCapture = new FormDataCapture();
                     formDataCapture.Show();
@@ -42,15 +40,12 @@ namespace Runtime_Terror
             { 
                 MessageBox.Show(ex.Message);
             }
-            finally 
-            { 
-
-            }
         }
 
         private void button_Register_Click(object sender, EventArgs e)
         {
-
+            Register newResgistration = new Register();
+            newResgistration.ShowDialog();
         }
     }
 }
