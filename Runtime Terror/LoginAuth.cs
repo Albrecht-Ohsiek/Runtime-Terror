@@ -11,7 +11,6 @@ namespace Runtime_Terror
     {
         public static bool passCheck(string username, string password)
         {
-            bool passCheck = false;
             string filename = @"users.txt";
             List<string> users = FileHandler.readFromFile(filename);
 
@@ -19,11 +18,11 @@ namespace Runtime_Terror
             {
                 if (users[i] == Encrypter.encryption(username) && users[i + 1] == Encrypter.encryption(password))
                 {
-                    passCheck = true;
+                    return true;
                 }
             }
 
-            return passCheck;
+            return false;
         }
                
     }
