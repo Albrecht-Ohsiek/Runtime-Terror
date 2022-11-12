@@ -9,3 +9,15 @@ C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runti
 C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runtime Terror.csproj.CoreCompileInputs.cache
 C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runtime Terror.exe
 C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runtime Terror.pdb
+C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\bin\Debug\Runtime Terror.exe.config
+C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\bin\Debug\Runtime Terror.exe
+C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\bin\Debug\Runtime Terror.pdb
+C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\obj\Debug\Runtime Terror.csproj.AssemblyReference.cache
+C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\obj\Debug\Runtime Terror.csproj.SuggestedBindingRedirects.cache
+C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\obj\Debug\Runtime_Terror.LoginForm.resources
+C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\obj\Debug\Runtime_Terror.Properties.Resources.resources
+C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\obj\Debug\Runtime_Terror.Register.resources
+C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\obj\Debug\Runtime Terror.csproj.GenerateResource.cache
+C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\obj\Debug\Runtime Terror.csproj.CoreCompileInputs.cache
+C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\obj\Debug\Runtime Terror.exe
+C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\obj\Debug\Runtime Terror.pdb
