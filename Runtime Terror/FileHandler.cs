@@ -11,9 +11,12 @@ namespace Runtime_Terror
     {
         public static List<string> readFromFile(string filename)
         {
+            string directory = Directory.GetCurrentDirectory();
+            string path = Path.Combine(directory, filename);
+
             List<string> strings = new List<string>();
 
-            FileStream fileStream = File.OpenRead(filename);
+            FileStream fileStream = File.OpenRead(path);
             StreamReader reader = new StreamReader(fileStream);
 
             while (reader.EndOfStream != true)
@@ -28,15 +31,15 @@ namespace Runtime_Terror
         }
 
         // Method to print List to File, line by line... Specify filename
-        public static void writeToFile(string filename, List<string> output)
+        public static void writeToFile(string filename, string output)
         {
-            FileStream fileStream = new FileStream(filename, FileMode.Append, FileAccess.Write);
+            string directory = Directory.GetCurrentDirectory();
+            string path = Path.Combine(directory, filename);
+
+            FileStream fileStream = new FileStream(path, FileMode.Append, FileAccess.Write);
             StreamWriter writer = new StreamWriter(fileStream);
             
-            foreach (var line in output)
-            {
-                writer.WriteLine(line);
-            }
+            writer.WriteLine(output);
 
             writer.Close();
             fileStream.Close();

@@ -21,7 +21,8 @@ namespace Runtime_Terror
         {
             try 
             { 
-                if(LoginAuth.passCheck(textBox_Username.Text, textBox_Password.Text))
+                LoginAuth loginAuth = new LoginAuth();
+                if(loginAuth.passCheck(textBox_Username.Text, textBox_Password.Text))
                 {
                     MessageBox.Show("LOGIN SUCCESSFUL");
 
