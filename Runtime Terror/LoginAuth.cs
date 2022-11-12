@@ -14,7 +14,7 @@ namespace Runtime_Terror
 
         public LoginAuth()
         {
-            string filename = @"users.txt";
+            string filename = "users.txt";
             List<string> list = new List<string>();
             list = FileHandler.readFromFile(filename);
 
