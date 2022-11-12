@@ -21,3 +21,4 @@ C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Proj
 C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\obj\Debug\Runtime Terror.csproj.CoreCompileInputs.cache
 C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\obj\Debug\Runtime Terror.exe
 C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\obj\Debug\Runtime Terror.pdb
+C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runtime_Terror.Register.resources

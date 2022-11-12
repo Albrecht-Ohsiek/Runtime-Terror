@@ -24,17 +24,9 @@ namespace Runtime_Terror
 
             try
             {
-                Boolean existingUser = false;
                 List<string> users = FileHandler.readFromFile(filename);
 
-                
-                for (int i = 0; i < users.Count; i += 2)
-                {
-                    if (users[i] == Encrypter.encryption(textBox_Username.Text))
-                    {
-                        existingUser = true;
-                    }
-                }
+                LoginAuth loginAuth = new LoginAuth();
 
                 if (textBox_Username.Text == "" || textBox_Password.Text == "" || textBox_PasswordConfirm.Text == "")
                 {
@@ -44,7 +36,7 @@ namespace Runtime_Terror
                 {
                     MessageBox.Show("Passwords do not match.");
                 }
-                else if (existingUser)
+                else if (loginAuth.userCheck(textBox_Username.Text))
                 {
                     MessageBox.Show("Username already exists.");
                     textBox_Username.Clear();
@@ -52,11 +44,9 @@ namespace Runtime_Terror
                 }
                 else
                 {
-                    List<string> newUser = new List<string>();
-                    User user = new User();
+                    string newUser;
 
-                    newUser.Add(Encrypter.encryption(user.Username = textBox_Username.Text));
-                    newUser.Add(Encrypter.encryption(user.Password = textBox_Password.Text));
+                    newUser = Encrypter.encryption(textBox_Username.Text) + ' ' + Encrypter.encryption(textBox_Password.Text);
 
                     FileHandler.writeToFile(filename, newUser);
                     MessageBox.Show("Registration successful.");
