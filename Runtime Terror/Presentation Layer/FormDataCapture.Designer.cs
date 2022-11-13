@@ -50,6 +50,7 @@
             this.labelModule = new System.Windows.Forms.Label();
             this.textBoxPhoneNum = new System.Windows.Forms.TextBox();
             this.labelGender = new System.Windows.Forms.Label();
+            this.buttonDatabaseConnect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -235,11 +236,21 @@
             this.labelGender.TabIndex = 21;
             this.labelGender.Text = "Gender";
             // 
+            // buttonDatabaseConnect
+            // 
+            this.buttonDatabaseConnect.Location = new System.Drawing.Point(615, 26);
+            this.buttonDatabaseConnect.Name = "buttonDatabaseConnect";
+            this.buttonDatabaseConnect.Size = new System.Drawing.Size(142, 29);
+            this.buttonDatabaseConnect.TabIndex = 22;
+            this.buttonDatabaseConnect.Text = "Connect Database [temp]";
+            this.buttonDatabaseConnect.UseVisualStyleBackColor = true;
+            // 
             // FormDataCapture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 444);
+            this.Controls.Add(this.buttonDatabaseConnect);
             this.Controls.Add(this.labelGender);
             this.Controls.Add(this.textBoxPhoneNum);
             this.Controls.Add(this.labelModule);
@@ -296,5 +307,6 @@
         private System.Windows.Forms.Label labelModule;
         private System.Windows.Forms.TextBox textBoxPhoneNum;
         private System.Windows.Forms.Label labelGender;
+        private System.Windows.Forms.Button buttonDatabaseConnect;
     }
 }
