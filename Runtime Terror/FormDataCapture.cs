@@ -16,5 +16,12 @@ namespace Runtime_Terror
         {
             InitializeComponent();
         }
+
+        private void FormDataCapture_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
