@@ -22,6 +22,9 @@ namespace Runtime_Terror
 
         }
 
-
+        private void FormDataCapture_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

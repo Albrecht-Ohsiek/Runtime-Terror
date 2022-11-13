@@ -101,6 +101,8 @@
             this.Controls.Add(this.label1);
             this.Name = "LoginForm";
             this.Text = "Belgium Campus Student Information Wizard - Runtime Terror";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

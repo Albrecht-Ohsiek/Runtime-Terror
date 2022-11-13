@@ -264,6 +264,7 @@
             this.Controls.Add(this.labelStudentID);
             this.Name = "FormDataCapture";
             this.Text = "Form2DataCapture";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDataCapture_FormClosed);
             this.Load += new System.EventHandler(this.FormDataCapture_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
