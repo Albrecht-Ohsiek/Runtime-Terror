@@ -46,36 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Encrypter.cs" />
-    <Compile Include="FileHandler.cs" />
-    <Compile Include="FormLogin.cs">
+    <Compile Include="Business Layer\Encrypter.cs" />
+    <Compile Include="Data Layer\FileHandler.cs" />
+    <Compile Include="Presentation Layer\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
+    <Compile Include="Presentation Layer\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDataCapture.cs">
+    <Compile Include="Presentation Layer\FormDataCapture.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDataCapture.Designer.cs">
+    <Compile Include="Presentation Layer\FormDataCapture.Designer.cs">
       <DependentUpon>FormDataCapture.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginAuth.cs" />
-    <Compile Include="Module.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Business Layer\LoginAuth.cs" />
+    <Compile Include="Business Layer\Module.cs" />
+    <Compile Include="Business Layer\Person.cs" />
+    <Compile Include="Presentation Layer\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Register.cs">
+    <Compile Include="Presentation Layer\Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Register.Designer.cs">
+    <Compile Include="Presentation Layer\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
-    <EmbeddedResource Include="FormDataCapture.resx">
+    <Compile Include="Business Layer\User.cs" />
+    <EmbeddedResource Include="Presentation Layer\FormDataCapture.resx">
       <DependentUpon>FormDataCapture.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
+    <EmbeddedResource Include="Presentation Layer\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -87,7 +87,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Register.resx">
+    <EmbeddedResource Include="Presentation Layer\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
