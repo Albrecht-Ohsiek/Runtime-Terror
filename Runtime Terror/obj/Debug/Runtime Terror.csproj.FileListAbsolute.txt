@@ -23,3 +23,5 @@ C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Proj
 C:\Users\DaleWillemse\Documents\BelgiumCampus\SecondYear\PRG282\Assignments\Project\Runtime Terror\obj\Debug\Runtime Terror.pdb
 C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runtime_Terror.Register.resources
 C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\obj\Debug\Runtime_Terror.FormDataCapture.resources
+C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\bin\Debug\bin\Debug\RuntimeTerrorDB.mdf
+C:\Users\Albrecht\Documents\GitHub\Runtime-Terror\Runtime Terror\bin\Debug\bin\Debug\RuntimeTerrorDB_log.ldf

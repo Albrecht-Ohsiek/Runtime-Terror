@@ -63,7 +63,7 @@
   <ItemGroup>
     <Compile Include="Business Layer\Encrypter.cs" />
     <Compile Include="Data Layer\FileHandler.cs" />
-    <Compile Include="Business Layer\DataHandler.cs" />
+    <Compile Include="Data Layer\DataHandler.cs" />
     <Compile Include="Presentation Layer\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,10 +120,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data Layer\RuntimeTerrorDB.mdf">
+    <Content Include="bin\Debug\RuntimeTerrorDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data Layer\RuntimeTerrorDB_log.ldf">
+    <Content Include="bin\Debug\RuntimeTerrorDB_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>RuntimeTerrorDB.mdf</DependentUpon>
     </Content>
