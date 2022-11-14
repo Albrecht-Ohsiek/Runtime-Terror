@@ -26,5 +26,27 @@ namespace Runtime_Terror
         {
             Application.Exit();
         }
+
+        private void buttonStoreInfo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string dob = dateTimePickerDOB.Value.ToString("yyyy-MM-dd");
+                Student newStudent = new Student(int.Parse(textBoxStudentID.Text), textBoxName.Text, textBoxLastName.Text, comboBoxGender.Text, dob, int.Parse(textBoxPhoneNum.Text), textBoxEmail.Text, textBoxModule.Text);
+                DataHandler addStudent = new DataHandler();
+                addStudent.StoreInformation(newStudent);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonDisplay_Click(object sender, EventArgs e)
+        {
+            DataHandler handler = new DataHandler();
+            DataTable dt = handler.Display();
+            dgvDisplay.DataSource = dt;
+        }
     }
 }

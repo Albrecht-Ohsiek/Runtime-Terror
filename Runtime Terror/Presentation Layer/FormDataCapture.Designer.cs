@@ -30,7 +30,7 @@
         {
             this.labelStudentID = new System.Windows.Forms.Label();
             this.textBoxStudentID = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDisplay = new System.Windows.Forms.DataGridView();
             this.buttonStoreInfo = new System.Windows.Forms.Button();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.dateTimePickerDOB = new System.Windows.Forms.DateTimePicker();
@@ -51,7 +51,7 @@
             this.textBoxPhoneNum = new System.Windows.Forms.TextBox();
             this.labelGender = new System.Windows.Forms.Label();
             this.buttonDatabaseConnect = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDisplay)).BeginInit();
             this.SuspendLayout();
             // 
             // labelStudentID
@@ -70,13 +70,13 @@
             this.textBoxStudentID.Size = new System.Drawing.Size(253, 20);
             this.textBoxStudentID.TabIndex = 1;
             // 
-            // dataGridView1
+            // dgvDisplay
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(159, 265);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(611, 169);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDisplay.Location = new System.Drawing.Point(159, 265);
+            this.dgvDisplay.Name = "dgvDisplay";
+            this.dgvDisplay.Size = new System.Drawing.Size(611, 169);
+            this.dgvDisplay.TabIndex = 2;
             // 
             // buttonStoreInfo
             // 
@@ -86,10 +86,15 @@
             this.buttonStoreInfo.TabIndex = 3;
             this.buttonStoreInfo.Text = "Store Information";
             this.buttonStoreInfo.UseVisualStyleBackColor = true;
+            this.buttonStoreInfo.Click += new System.EventHandler(this.buttonStoreInfo_Click);
             // 
             // comboBoxGender
             // 
             this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Not-Specific"});
             this.comboBoxGender.Location = new System.Drawing.Point(220, 160);
             this.comboBoxGender.Name = "comboBoxGender";
             this.comboBoxGender.Size = new System.Drawing.Size(172, 21);
@@ -165,6 +170,7 @@
             this.buttonDisplay.TabIndex = 13;
             this.buttonDisplay.Text = "Display";
             this.buttonDisplay.UseVisualStyleBackColor = true;
+            this.buttonDisplay.Click += new System.EventHandler(this.buttonDisplay_Click);
             // 
             // labelName
             // 
@@ -270,14 +276,14 @@
             this.Controls.Add(this.dateTimePickerDOB);
             this.Controls.Add(this.comboBoxGender);
             this.Controls.Add(this.buttonStoreInfo);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDisplay);
             this.Controls.Add(this.textBoxStudentID);
             this.Controls.Add(this.labelStudentID);
             this.Name = "FormDataCapture";
             this.Text = "Form2DataCapture";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDataCapture_FormClosed);
             this.Load += new System.EventHandler(this.FormDataCapture_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDisplay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,7 +293,7 @@
 
         private System.Windows.Forms.Label labelStudentID;
         private System.Windows.Forms.TextBox textBoxStudentID;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDisplay;
         private System.Windows.Forms.Button buttonStoreInfo;
         private System.Windows.Forms.ComboBox comboBoxGender;
         private System.Windows.Forms.DateTimePicker dateTimePickerDOB;
