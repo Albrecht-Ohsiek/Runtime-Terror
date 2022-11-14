@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace Runtime_Terror
 {
-    internal class Person
+    internal class Student
     {
         private int stdNumber;
-        private string name, surname, gender;
-        private string dob;
+        private string name;
+        private string surname; 
+        private string dob; 
+        private string gender;
         private int phone;
-        private string address;
-        private List<Module> moduleCodes = new List<Module>(); // list requires: code, name, description and resources(as a list).
+        private string email;
+        private string moduleCodes; 
 
         public int StdNumber { get => stdNumber; set => stdNumber = value; }
         public string Name { get => name; set => name = value; }
@@ -21,10 +23,10 @@ namespace Runtime_Terror
         public string Gender { get => gender; set => gender = value; }
         public string Dob { get => dob; set => dob = value; }
         public int Phone { get => phone; set => phone = value; }
-        public string Address { get => address; set => address = value; }
-        public List<Module> ModuleCodes { get => moduleCodes; set => moduleCodes = value; }
+        public string Email { get => email; set => email = value; }
+        public string ModuleCodes { get => moduleCodes; set => moduleCodes = value; }
 
-        public Person(int stdNumber, string name, string surname, string gender, string dob, int phone, string address, List<Module> moduleCodes)
+        public Student(int stdNumber, string name, string surname, string gender, string dob, int phone, string email, string moduleCodes)
         {
             this.StdNumber = stdNumber;
             this.Name = name;
@@ -32,7 +34,7 @@ namespace Runtime_Terror
             this.Gender = gender;
             this.Dob = dob;
             this.Phone = phone;
-            this.Address = address;
+            this.Email = email;
             this.ModuleCodes = moduleCodes;
         }
     }
