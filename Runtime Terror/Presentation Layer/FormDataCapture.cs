@@ -44,9 +44,17 @@ namespace Runtime_Terror
 
         private void buttonDisplay_Click(object sender, EventArgs e)
         {
-            DataHandler handler = new DataHandler();
-            DataTable dt = handler.Display();
-            dgvDisplay.DataSource = dt;
+            try
+            {
+                DataHandler handler = new DataHandler();
+                DataTable dt = handler.Display();
+                dgvDisplay.DataSource = dt;
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
