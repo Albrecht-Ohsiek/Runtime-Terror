@@ -24,12 +24,26 @@ namespace Runtime_Terror
 
         }
 
-        public void StoreInformation()
+        public void StoreInformation(Student student)
         {          
             openConnection();          
             try
             {
-    
+                SqlCommand cmd = new SqlCommand("AddStudent", myConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@StudentId", SqlDbType.Int).Value = student.StdNumber;
+                cmd.Parameters.Add("@Name", SqlDbType.VarChar).Value = student.Name;
+                cmd.Parameters.Add("@Surname", SqlDbType.VarChar).Value = student.Surname;
+                cmd.Parameters.Add("@DOB", SqlDbType.VarChar).Value = student.Dob;
+                cmd.Parameters.Add("@Gender", SqlDbType.VarChar).Value = student.Gender;
+                cmd.Parameters.Add("@Phone", SqlDbType.Int).Value = student.Phone;
+                cmd.Parameters.Add("@Email", SqlDbType.VarChar).Value = student.Email;
+                cmd.Parameters.Add("@ModuleCodes", SqlDbType.VarChar).Value = student.ModuleCodes;
+
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Student added successfully");
             }
             catch (SqlException ex)
             {
@@ -98,27 +112,23 @@ namespace Runtime_Terror
             }
 
         }
-
-        public void Display()
+        
+        public DataTable Display()
         {
             openConnection();
-            try
-            {
-
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                myConnection.Close();
-            }
-
+                
+            string query = "SELECT * FROM Student";
+            SqlCommand cmd = new SqlCommand(query, myConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            
+            myConnection.Close();
+            
+            return dt;
+            
         }
-
-
+            
     }
-
 
 }
