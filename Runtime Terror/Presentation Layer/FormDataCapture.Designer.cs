@@ -107,7 +107,7 @@
             this.buttonStudentStoreInfo.Location = new System.Drawing.Point(9, 237);
             this.buttonStudentStoreInfo.Name = "buttonStudentStoreInfo";
             this.buttonStudentStoreInfo.Size = new System.Drawing.Size(109, 29);
-            this.buttonStudentStoreInfo.TabIndex = 3;
+            this.buttonStudentStoreInfo.TabIndex = 9;
             this.buttonStudentStoreInfo.Text = "Create";
             this.buttonStudentStoreInfo.UseVisualStyleBackColor = true;
             this.buttonStudentStoreInfo.Click += new System.EventHandler(this.buttonStoreInfo_Click);
@@ -122,49 +122,49 @@
             this.comboBoxStudentGender.Location = new System.Drawing.Point(127, 155);
             this.comboBoxStudentGender.Name = "comboBoxStudentGender";
             this.comboBoxStudentGender.Size = new System.Drawing.Size(181, 21);
-            this.comboBoxStudentGender.TabIndex = 4;
+            this.comboBoxStudentGender.TabIndex = 6;
             // 
             // dateTimePickerStudentDOB
             // 
             this.dateTimePickerStudentDOB.Location = new System.Drawing.Point(127, 103);
             this.dateTimePickerStudentDOB.Name = "dateTimePickerStudentDOB";
             this.dateTimePickerStudentDOB.Size = new System.Drawing.Size(215, 20);
-            this.dateTimePickerStudentDOB.TabIndex = 5;
+            this.dateTimePickerStudentDOB.TabIndex = 4;
             // 
             // textBoxStudentName
             // 
             this.textBoxStudentName.Location = new System.Drawing.Point(127, 51);
             this.textBoxStudentName.Name = "textBoxStudentName";
             this.textBoxStudentName.Size = new System.Drawing.Size(215, 20);
-            this.textBoxStudentName.TabIndex = 6;
+            this.textBoxStudentName.TabIndex = 2;
             // 
             // textBoxStudentLastName
             // 
             this.textBoxStudentLastName.Location = new System.Drawing.Point(127, 77);
             this.textBoxStudentLastName.Name = "textBoxStudentLastName";
             this.textBoxStudentLastName.Size = new System.Drawing.Size(215, 20);
-            this.textBoxStudentLastName.TabIndex = 7;
+            this.textBoxStudentLastName.TabIndex = 3;
             // 
             // textBoxStudentEmail
             // 
             this.textBoxStudentEmail.Location = new System.Drawing.Point(127, 182);
             this.textBoxStudentEmail.Name = "textBoxStudentEmail";
             this.textBoxStudentEmail.Size = new System.Drawing.Size(215, 20);
-            this.textBoxStudentEmail.TabIndex = 8;
+            this.textBoxStudentEmail.TabIndex = 7;
             // 
             // textBoxStudentModule
             // 
             this.textBoxStudentModule.Location = new System.Drawing.Point(127, 208);
             this.textBoxStudentModule.Name = "textBoxStudentModule";
             this.textBoxStudentModule.Size = new System.Drawing.Size(215, 20);
-            this.textBoxStudentModule.TabIndex = 9;
+            this.textBoxStudentModule.TabIndex = 8;
             // 
             // buttonStudentSearch
             // 
             this.buttonStudentSearch.Location = new System.Drawing.Point(267, 13);
             this.buttonStudentSearch.Name = "buttonStudentSearch";
             this.buttonStudentSearch.Size = new System.Drawing.Size(77, 29);
-            this.buttonStudentSearch.TabIndex = 10;
+            this.buttonStudentSearch.TabIndex = 13;
             this.buttonStudentSearch.Text = "Search";
             this.buttonStudentSearch.UseVisualStyleBackColor = true;
             this.buttonStudentSearch.Click += new System.EventHandler(this.buttonStudentSearch_Click);
@@ -174,25 +174,27 @@
             this.buttonStudentUpdate.Location = new System.Drawing.Point(127, 237);
             this.buttonStudentUpdate.Name = "buttonStudentUpdate";
             this.buttonStudentUpdate.Size = new System.Drawing.Size(109, 29);
-            this.buttonStudentUpdate.TabIndex = 11;
+            this.buttonStudentUpdate.TabIndex = 10;
             this.buttonStudentUpdate.Text = "Update";
             this.buttonStudentUpdate.UseVisualStyleBackColor = true;
+            this.buttonStudentUpdate.Click += new System.EventHandler(this.buttonStudentUpdate_Click);
             // 
             // buttonStudentDelete
             // 
             this.buttonStudentDelete.Location = new System.Drawing.Point(244, 237);
             this.buttonStudentDelete.Name = "buttonStudentDelete";
             this.buttonStudentDelete.Size = new System.Drawing.Size(109, 29);
-            this.buttonStudentDelete.TabIndex = 12;
+            this.buttonStudentDelete.TabIndex = 11;
             this.buttonStudentDelete.Text = "Delete";
             this.buttonStudentDelete.UseVisualStyleBackColor = true;
+            this.buttonStudentDelete.Click += new System.EventHandler(this.buttonStudentDelete_Click);
             // 
             // buttonStudentsViewAll
             // 
             this.buttonStudentsViewAll.Location = new System.Drawing.Point(490, 453);
             this.buttonStudentsViewAll.Name = "buttonStudentsViewAll";
             this.buttonStudentsViewAll.Size = new System.Drawing.Size(137, 29);
-            this.buttonStudentsViewAll.TabIndex = 13;
+            this.buttonStudentsViewAll.TabIndex = 23;
             this.buttonStudentsViewAll.Text = "Display Students";
             this.buttonStudentsViewAll.UseVisualStyleBackColor = true;
             this.buttonStudentsViewAll.Click += new System.EventHandler(this.buttonStudentsViewAll_Click);
@@ -256,7 +258,7 @@
             this.textBoxStudentPhoneNum.Location = new System.Drawing.Point(127, 129);
             this.textBoxStudentPhoneNum.Name = "textBoxStudentPhoneNum";
             this.textBoxStudentPhoneNum.Size = new System.Drawing.Size(215, 20);
-            this.textBoxStudentPhoneNum.TabIndex = 20;
+            this.textBoxStudentPhoneNum.TabIndex = 5;
             // 
             // labelStudentGender
             // 
@@ -321,7 +323,7 @@
             this.textBoxSearchStudent.Location = new System.Drawing.Point(72, 18);
             this.textBoxSearchStudent.Name = "textBoxSearchStudent";
             this.textBoxSearchStudent.Size = new System.Drawing.Size(189, 20);
-            this.textBoxSearchStudent.TabIndex = 23;
+            this.textBoxSearchStudent.TabIndex = 12;
             // 
             // groupBox3
             // 
@@ -349,7 +351,7 @@
             this.buttonModuleDelete.Location = new System.Drawing.Point(244, 237);
             this.buttonModuleDelete.Name = "buttonModuleDelete";
             this.buttonModuleDelete.Size = new System.Drawing.Size(109, 29);
-            this.buttonModuleDelete.TabIndex = 24;
+            this.buttonModuleDelete.TabIndex = 20;
             this.buttonModuleDelete.Text = "Delete";
             this.buttonModuleDelete.UseVisualStyleBackColor = true;
             this.buttonModuleDelete.Click += new System.EventHandler(this.buttonModuleDelete_Click);
@@ -359,7 +361,7 @@
             this.buttonModuleUpdate.Location = new System.Drawing.Point(127, 237);
             this.buttonModuleUpdate.Name = "buttonModuleUpdate";
             this.buttonModuleUpdate.Size = new System.Drawing.Size(109, 29);
-            this.buttonModuleUpdate.TabIndex = 23;
+            this.buttonModuleUpdate.TabIndex = 19;
             this.buttonModuleUpdate.Text = "Update";
             this.buttonModuleUpdate.UseVisualStyleBackColor = true;
             this.buttonModuleUpdate.Click += new System.EventHandler(this.buttonModuleUpdate_Click);
@@ -380,7 +382,7 @@
             this.textBoxModuleSearch.Location = new System.Drawing.Point(70, 18);
             this.textBoxModuleSearch.Name = "textBoxModuleSearch";
             this.textBoxModuleSearch.Size = new System.Drawing.Size(191, 20);
-            this.textBoxModuleSearch.TabIndex = 20;
+            this.textBoxModuleSearch.TabIndex = 21;
             // 
             // label2
             // 
@@ -396,7 +398,7 @@
             this.buttonModuleSearch.Location = new System.Drawing.Point(267, 13);
             this.buttonModuleSearch.Name = "buttonModuleSearch";
             this.buttonModuleSearch.Size = new System.Drawing.Size(77, 29);
-            this.buttonModuleSearch.TabIndex = 11;
+            this.buttonModuleSearch.TabIndex = 22;
             this.buttonModuleSearch.Text = "Search";
             this.buttonModuleSearch.UseVisualStyleBackColor = true;
             this.buttonModuleSearch.Click += new System.EventHandler(this.buttonModuleSearch_Click);
@@ -406,7 +408,7 @@
             this.buttonModuleStoreInfo.Location = new System.Drawing.Point(9, 237);
             this.buttonModuleStoreInfo.Name = "buttonModuleStoreInfo";
             this.buttonModuleStoreInfo.Size = new System.Drawing.Size(109, 29);
-            this.buttonModuleStoreInfo.TabIndex = 22;
+            this.buttonModuleStoreInfo.TabIndex = 18;
             this.buttonModuleStoreInfo.Text = "Create";
             this.buttonModuleStoreInfo.UseVisualStyleBackColor = true;
             this.buttonModuleStoreInfo.Click += new System.EventHandler(this.buttonModuleStoreInfo_Click);
@@ -425,21 +427,21 @@
             this.textBoxModuleId.Location = new System.Drawing.Point(127, 23);
             this.textBoxModuleId.Name = "textBoxModuleId";
             this.textBoxModuleId.Size = new System.Drawing.Size(215, 20);
-            this.textBoxModuleId.TabIndex = 1;
+            this.textBoxModuleId.TabIndex = 14;
             // 
             // textBoxModuleName
             // 
             this.textBoxModuleName.Location = new System.Drawing.Point(127, 51);
             this.textBoxModuleName.Name = "textBoxModuleName";
             this.textBoxModuleName.Size = new System.Drawing.Size(215, 20);
-            this.textBoxModuleName.TabIndex = 6;
+            this.textBoxModuleName.TabIndex = 15;
             // 
             // textBoxDesc
             // 
             this.textBoxDesc.Location = new System.Drawing.Point(127, 77);
             this.textBoxDesc.Name = "textBoxDesc";
             this.textBoxDesc.Size = new System.Drawing.Size(215, 20);
-            this.textBoxDesc.TabIndex = 7;
+            this.textBoxDesc.TabIndex = 16;
             // 
             // labelModuleLink
             // 
@@ -455,7 +457,7 @@
             this.textBoxLink.Location = new System.Drawing.Point(127, 103);
             this.textBoxLink.Name = "textBoxLink";
             this.textBoxLink.Size = new System.Drawing.Size(215, 20);
-            this.textBoxLink.TabIndex = 8;
+            this.textBoxLink.TabIndex = 17;
             // 
             // labelModuleName
             // 
@@ -480,7 +482,7 @@
             this.buttonMuduleViewAll.Location = new System.Drawing.Point(634, 453);
             this.buttonMuduleViewAll.Name = "buttonMuduleViewAll";
             this.buttonMuduleViewAll.Size = new System.Drawing.Size(137, 29);
-            this.buttonMuduleViewAll.TabIndex = 25;
+            this.buttonMuduleViewAll.TabIndex = 24;
             this.buttonMuduleViewAll.Text = "Display Modules";
             this.buttonMuduleViewAll.UseVisualStyleBackColor = true;
             this.buttonMuduleViewAll.Click += new System.EventHandler(this.buttonMuduleViewAll_Click);

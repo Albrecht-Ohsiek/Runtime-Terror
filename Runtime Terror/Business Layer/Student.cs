@@ -37,5 +37,7 @@ namespace Runtime_Terror
             this.Email = email;
             this.ModuleCodes = moduleCodes;
         }
+
+        public Student() { }
     }
 }

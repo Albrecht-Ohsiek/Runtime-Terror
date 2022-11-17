@@ -102,13 +102,13 @@ namespace Runtime_Terror
             }
         }
 
-        public void Update(Student student) // Student Update
+        public void UpdateStudent(Student student) // Student Update
         {
             openConnection();
 
             try
             {
-                SqlCommand cmd = new SqlCommand("spUpdate", myConnection);
+                SqlCommand cmd = new SqlCommand("spUpdateStudentInfo", myConnection);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add("@StudentId", SqlDbType.Int).Value = student.StdNumber;
@@ -135,12 +135,12 @@ namespace Runtime_Terror
             
         }
 
-        public void Delete(Student student) // Student Delete
+        public void DeleteStudent(Student student) // Student Delete
         {
             openConnection();
             try
             {
-             SqlCommand cmd = new SqlCommand("spDelete", myConnection);
+             SqlCommand cmd = new SqlCommand("spDeleteStudentInfo", myConnection);
              cmd.CommandType = CommandType.StoredProcedure;
 
              cmd.Parameters.Add("@StudentId", SqlDbType.Int).Value = student.StdNumber;
@@ -313,6 +313,8 @@ namespace Runtime_Terror
             }
             
         }
+
+
     }
 
 }

@@ -173,6 +173,7 @@ namespace Runtime_Terror
             }
         }
 
+
         private void buttonStudentSearch_Click(object sender, EventArgs e)
         {
             string studentID = textBoxSearchStudent.Text;
@@ -187,8 +188,8 @@ namespace Runtime_Terror
                 textBoxStudentName.Text = dt.Rows[0][1].ToString();
                 textBoxStudentLastName.Text = dt.Rows[0][2].ToString();
                 dateTimePickerStudentDOB.Text = dt.Rows[0][3].ToString();
-                textBoxStudentPhoneNum.Text = dt.Rows[0][4].ToString();
-                comboBoxStudentGender.Text = dt.Rows[0][5].ToString();
+                textBoxStudentPhoneNum.Text = dt.Rows[0][5].ToString();
+                comboBoxStudentGender.Text = dt.Rows[0][4].ToString();
                 textBoxStudentEmail.Text = dt.Rows[0][6].ToString();
                 textBoxStudentModule.Text = dt.Rows[0][7].ToString();
             }
@@ -217,6 +218,69 @@ namespace Runtime_Terror
             else
             {
                 MessageBox.Show("Module does not exist.");
+            }
+        }
+
+        private void buttonStudentUpdate_Click(object sender, EventArgs e)
+        {
+            if (textBoxSearchStudent.Text == "")
+            {
+                MessageBox.Show("Please enter a Student ID to search for.");
+            }
+            else
+            {
+                int studentID = int.Parse(textBoxSearchStudent.Text);
+                DataHandler deleteStudent = new DataHandler();
+                if (deleteStudent.EntryExists(studentID.ToString(), "Student"))
+                {
+                    string dob = dateTimePickerStudentDOB.Value.ToString("yyyy-MM-dd");
+                    Student student = new Student(int.Parse(textBoxStudentID.Text), textBoxStudentName.Text, textBoxStudentLastName.Text, comboBoxStudentGender.Text, dob, int.Parse(textBoxStudentPhoneNum.Text), textBoxStudentEmail.Text, textBoxStudentModule.Text);
+                    deleteStudent.UpdateStudent(student);
+
+                    textBoxStudentID.Clear();
+                    textBoxStudentName.Clear();
+                    textBoxStudentLastName.Clear();
+                    textBoxStudentPhoneNum.Clear();
+                    comboBoxStudentGender.Text = "";
+                    textBoxStudentEmail.Clear();
+                    textBoxStudentModule.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Module does not exist.");
+                }
+            }
+        }
+
+        private void buttonStudentDelete_Click(object sender, EventArgs e)
+        {
+            if (textBoxSearchStudent.Text == "")
+            {
+                MessageBox.Show("Please enter a Student ID to search for.");
+            }
+            else
+            {
+                int studentID = int.Parse(textBoxSearchStudent.Text);
+                DataHandler deleteStudent = new DataHandler();
+                if(deleteStudent.EntryExists(studentID.ToString(), "Student"))
+                {
+                    Student student = new Student();
+                    student.StdNumber = studentID;
+                    deleteStudent.DeleteStudent(student);
+
+                    textBoxStudentID.Clear();
+                    textBoxStudentName.Clear();
+                    textBoxStudentLastName.Clear();
+                    textBoxStudentPhoneNum.Clear();
+                    comboBoxStudentGender.Text = "";
+                    textBoxStudentEmail.Clear();
+                    textBoxStudentModule.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Student does not exist.");
+                }
+                
             }
         }
     }
