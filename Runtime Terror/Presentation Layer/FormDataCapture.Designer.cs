@@ -37,7 +37,6 @@
             this.textBoxStudentName = new System.Windows.Forms.TextBox();
             this.textBoxStudentLastName = new System.Windows.Forms.TextBox();
             this.textBoxStudentEmail = new System.Windows.Forms.TextBox();
-            this.textBoxStudentModule = new System.Windows.Forms.TextBox();
             this.buttonStudentSearch = new System.Windows.Forms.Button();
             this.buttonStudentUpdate = new System.Windows.Forms.Button();
             this.buttonStudentDelete = new System.Windows.Forms.Button();
@@ -71,6 +70,7 @@
             this.labelModuleName = new System.Windows.Forms.Label();
             this.labelModuleDiscription = new System.Windows.Forms.Label();
             this.buttonMuduleViewAll = new System.Windows.Forms.Button();
+            this.comboBoxStudentModule = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplay)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -151,13 +151,6 @@
             this.textBoxStudentEmail.Name = "textBoxStudentEmail";
             this.textBoxStudentEmail.Size = new System.Drawing.Size(215, 20);
             this.textBoxStudentEmail.TabIndex = 7;
-            // 
-            // textBoxStudentModule
-            // 
-            this.textBoxStudentModule.Location = new System.Drawing.Point(127, 208);
-            this.textBoxStudentModule.Name = "textBoxStudentModule";
-            this.textBoxStudentModule.Size = new System.Drawing.Size(215, 20);
-            this.textBoxStudentModule.TabIndex = 8;
             // 
             // buttonStudentSearch
             // 
@@ -271,6 +264,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBoxStudentModule);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.labelStudentID);
             this.groupBox1.Controls.Add(this.textBoxStudentID);
@@ -287,7 +281,6 @@
             this.groupBox1.Controls.Add(this.labelStudentEmail);
             this.groupBox1.Controls.Add(this.textBoxStudentEmail);
             this.groupBox1.Controls.Add(this.labelStudentPhoneNum);
-            this.groupBox1.Controls.Add(this.textBoxStudentModule);
             this.groupBox1.Controls.Add(this.labelStudentDOB);
             this.groupBox1.Controls.Add(this.labelStudentName);
             this.groupBox1.Controls.Add(this.labelStudentLastName);
@@ -487,6 +480,14 @@
             this.buttonMuduleViewAll.UseVisualStyleBackColor = true;
             this.buttonMuduleViewAll.Click += new System.EventHandler(this.buttonMuduleViewAll_Click);
             // 
+            // comboBoxStudentModule
+            // 
+            this.comboBoxStudentModule.FormattingEnabled = true;
+            this.comboBoxStudentModule.Location = new System.Drawing.Point(127, 208);
+            this.comboBoxStudentModule.Name = "comboBoxStudentModule";
+            this.comboBoxStudentModule.Size = new System.Drawing.Size(181, 21);
+            this.comboBoxStudentModule.TabIndex = 8;
+            // 
             // FormDataCapture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,7 +526,6 @@
         private System.Windows.Forms.TextBox textBoxStudentName;
         private System.Windows.Forms.TextBox textBoxStudentLastName;
         private System.Windows.Forms.TextBox textBoxStudentEmail;
-        private System.Windows.Forms.TextBox textBoxStudentModule;
         private System.Windows.Forms.Button buttonStudentSearch;
         private System.Windows.Forms.Button buttonStudentUpdate;
         private System.Windows.Forms.Button buttonStudentDelete;
@@ -559,5 +559,6 @@
         private System.Windows.Forms.Button buttonModuleDelete;
         private System.Windows.Forms.Button buttonModuleUpdate;
         private System.Windows.Forms.Button buttonModuleStoreInfo;
+        private System.Windows.Forms.ComboBox comboBoxStudentModule;
     }
 }

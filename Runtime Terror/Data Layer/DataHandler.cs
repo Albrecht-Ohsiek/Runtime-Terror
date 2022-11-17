@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Forms;
 using System.Drawing;
+using System.IO;
+using System.Collections;
 
 namespace Runtime_Terror
 {
@@ -314,7 +316,33 @@ namespace Runtime_Terror
             
         }
 
+        public DataTable getModules()
+        {
+            DataTable dataTable = new DataTable();
 
+            try
+            {
+                openConnection();
+
+                string selectQ = "SELECT ModuleName FROM Modules";
+
+                SqlCommand cmd = new SqlCommand(selectQ, myConnection);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+                                               
+                sqlDataAdapter.Fill(dataTable);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+
+            }
+
+            return dataTable;
+        }
     }
 
 }

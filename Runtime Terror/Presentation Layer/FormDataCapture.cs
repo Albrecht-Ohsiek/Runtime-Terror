@@ -20,7 +20,19 @@ namespace Runtime_Terror
 
         private void FormDataCapture_Load(object sender, EventArgs e)
         {
+            updateComboBox();
+        }
 
+        private void updateComboBox() 
+        {
+            comboBoxStudentModule.DataSource = null;
+            comboBoxStudentModule.Items.Clear();
+        
+            DataHandler handler = new DataHandler();
+            DataTable dt = handler.getModules();
+
+            comboBoxStudentModule.DataSource = dt;
+            comboBoxStudentModule.DisplayMember = "ModuleName";
         }
 
         private void FormDataCapture_FormClosed(object sender, FormClosedEventArgs e)
@@ -64,14 +76,14 @@ namespace Runtime_Terror
         {
             try
             {
-                if(textBoxStudentID.Text == "" || textBoxStudentName.Text == "" || textBoxStudentLastName.Text == "" || textBoxStudentPhoneNum.Text == "" || textBoxStudentEmail.Text == "" || textBoxStudentModule.Text == "")
+                if(textBoxStudentID.Text == "" || textBoxStudentName.Text == "" || textBoxStudentLastName.Text == "" || textBoxStudentPhoneNum.Text == "" || textBoxStudentEmail.Text == "" || comboBoxStudentModule.Text == "")
                 {
                     MessageBox.Show("Please fill in all the fields.");
                 }
                 else
                 {
                     string dob = dateTimePickerStudentDOB.Value.ToString("yyyy-MM-dd");
-                    Student newStudent = new Student(int.Parse(textBoxStudentID.Text), textBoxStudentName.Text, textBoxStudentLastName.Text, comboBoxStudentGender.Text, dob, int.Parse(textBoxStudentPhoneNum.Text), textBoxStudentEmail.Text, textBoxStudentModule.Text);
+                    Student newStudent = new Student(int.Parse(textBoxStudentID.Text), textBoxStudentName.Text, textBoxStudentLastName.Text, comboBoxStudentGender.Text, dob, int.Parse(textBoxStudentPhoneNum.Text), textBoxStudentEmail.Text, comboBoxStudentModule.Text);
                     DataHandler addStudent = new DataHandler();
                     addStudent.StoreInformation(newStudent);
                     
@@ -81,7 +93,7 @@ namespace Runtime_Terror
                     textBoxStudentPhoneNum.Clear();
                     comboBoxStudentGender.Text = "";
                     textBoxStudentEmail.Clear();
-                    textBoxStudentModule.Clear();
+                    comboBoxStudentModule.Text = "";
                 }
             }
             catch (Exception ex)
@@ -116,6 +128,10 @@ namespace Runtime_Terror
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                updateComboBox();
+            }
         }
         
         private void buttonModuleUpdate_Click(object sender, EventArgs e) // Module Update
@@ -143,7 +159,9 @@ namespace Runtime_Terror
                 {
                     MessageBox.Show("Module does not exist.");
                 }
+                
             }
+            updateComboBox();
         }
 
         private void buttonModuleDelete_Click(object sender, EventArgs e) // Module Delete
@@ -171,6 +189,9 @@ namespace Runtime_Terror
                 }
                 
             }
+           
+            updateComboBox();
+            
         }
 
 
@@ -191,7 +212,7 @@ namespace Runtime_Terror
                 textBoxStudentPhoneNum.Text = dt.Rows[0][5].ToString();
                 comboBoxStudentGender.Text = dt.Rows[0][4].ToString();
                 textBoxStudentEmail.Text = dt.Rows[0][6].ToString();
-                textBoxStudentModule.Text = dt.Rows[0][7].ToString();
+                comboBoxStudentModule.Text = dt.Rows[0][7].ToString();
             }
             else
             {
@@ -234,7 +255,7 @@ namespace Runtime_Terror
                 if (deleteStudent.EntryExists(studentID.ToString(), "Student"))
                 {
                     string dob = dateTimePickerStudentDOB.Value.ToString("yyyy-MM-dd");
-                    Student student = new Student(int.Parse(textBoxStudentID.Text), textBoxStudentName.Text, textBoxStudentLastName.Text, comboBoxStudentGender.Text, dob, int.Parse(textBoxStudentPhoneNum.Text), textBoxStudentEmail.Text, textBoxStudentModule.Text);
+                    Student student = new Student(int.Parse(textBoxStudentID.Text), textBoxStudentName.Text, textBoxStudentLastName.Text, comboBoxStudentGender.Text, dob, int.Parse(textBoxStudentPhoneNum.Text), textBoxStudentEmail.Text, comboBoxStudentModule.Text);
                     deleteStudent.UpdateStudent(student);
 
                     textBoxStudentID.Clear();
@@ -243,7 +264,7 @@ namespace Runtime_Terror
                     textBoxStudentPhoneNum.Clear();
                     comboBoxStudentGender.Text = "";
                     textBoxStudentEmail.Clear();
-                    textBoxStudentModule.Clear();
+                    comboBoxStudentModule.Text = "";
                 }
                 else
                 {
@@ -274,7 +295,7 @@ namespace Runtime_Terror
                     textBoxStudentPhoneNum.Clear();
                     comboBoxStudentGender.Text = "";
                     textBoxStudentEmail.Clear();
-                    textBoxStudentModule.Clear();
+                    comboBoxStudentModule.Text = "";
                 }
                 else
                 {
