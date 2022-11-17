@@ -24,12 +24,12 @@ namespace Runtime_Terror
 
         }
 
-        public void StoreInformation(Student student)
+        public void StoreInformation(Student student) // Storing a new student.
         {          
             openConnection();          
             try
             {
-                SqlCommand cmd = new SqlCommand("AddStudent", myConnection);
+                SqlCommand cmd = new SqlCommand("spAddStudent", myConnection);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add("@StudentId", SqlDbType.Int).Value = student.StdNumber;
@@ -40,10 +40,36 @@ namespace Runtime_Terror
                 cmd.Parameters.Add("@Phone", SqlDbType.Int).Value = student.Phone;
                 cmd.Parameters.Add("@Email", SqlDbType.VarChar).Value = student.Email;
                 cmd.Parameters.Add("@ModuleCodes", SqlDbType.VarChar).Value = student.ModuleCodes;
-
-
+                
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Student added successfully");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                myConnection.Close();
+            }
+
+        }
+        
+        public void StoreInformation(Module module) // Storing a new module.
+        {
+            openConnection();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spCreateModule", myConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@ModuleCode", SqlDbType.VarChar).Value = module.Code;
+                cmd.Parameters.Add("@ModuleName", SqlDbType.VarChar).Value = module.Name;
+                cmd.Parameters.Add("@ModuleDescription", SqlDbType.VarChar).Value = module.Description;
+                cmd.Parameters.Add("@ExternalResources", SqlDbType.VarChar).Value = module.Resources;
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Module added successfully");
             }
             catch (SqlException ex)
             {
@@ -134,11 +160,10 @@ namespace Runtime_Terror
 
         }
         
-        public DataTable Display()
+        public DataTable Display(string query)
         {
             openConnection();
                 
-            string query = "SELECT * FROM Student";
             SqlCommand cmd = new SqlCommand(query, myConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

@@ -51,31 +51,31 @@
             this.textBoxStudentPhoneNum = new System.Windows.Forms.TextBox();
             this.labelStudentGender = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonModuleDelete = new System.Windows.Forms.Button();
+            this.buttonModuleUpdate = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonModuleSearch = new System.Windows.Forms.Button();
+            this.buttonModuleStoreInfo = new System.Windows.Forms.Button();
             this.labelModuleID = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxModuleId = new System.Windows.Forms.TextBox();
+            this.textBoxModuleName = new System.Windows.Forms.TextBox();
+            this.textBoxDesc = new System.Windows.Forms.TextBox();
             this.labelModuleLink = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxLink = new System.Windows.Forms.TextBox();
             this.labelModuleName = new System.Windows.Forms.Label();
             this.labelModuleDiscription = new System.Windows.Forms.Label();
             this.buttonMuduleViewAll = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.buttonModuleSearch = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.buttonModuleDelete = new System.Windows.Forms.Button();
-            this.buttonModuleUpdate = new System.Windows.Forms.Button();
-            this.buttonModuleStoreInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplay)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelStudentID
@@ -194,7 +194,7 @@
             this.buttonStudentsViewAll.TabIndex = 13;
             this.buttonStudentsViewAll.Text = "Display Students";
             this.buttonStudentsViewAll.UseVisualStyleBackColor = true;
-            this.buttonStudentsViewAll.Click += new System.EventHandler(this.buttonDisplay_Click);
+            this.buttonStudentsViewAll.Click += new System.EventHandler(this.buttonStudentsViewAll_Click);
             // 
             // labelStudentName
             // 
@@ -246,9 +246,9 @@
             this.labelStudentModule.AutoSize = true;
             this.labelStudentModule.Location = new System.Drawing.Point(14, 211);
             this.labelStudentModule.Name = "labelStudentModule";
-            this.labelStudentModule.Size = new System.Drawing.Size(42, 13);
+            this.labelStudentModule.Size = new System.Drawing.Size(47, 13);
             this.labelStudentModule.TabIndex = 19;
-            this.labelStudentModule.Text = "Module";
+            this.labelStudentModule.Text = "Modules";
             // 
             // textBoxStudentPhoneNum
             // 
@@ -295,6 +295,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Students";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.buttonStudentSearch);
+            this.groupBox4.Location = new System.Drawing.Point(6, 266);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(350, 48);
+            this.groupBox4.TabIndex = 20;
+            this.groupBox4.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Student ID";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(72, 18);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(189, 20);
+            this.textBox2.TabIndex = 23;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.buttonModuleDelete);
@@ -302,11 +329,11 @@
             this.groupBox3.Controls.Add(this.groupBox2);
             this.groupBox3.Controls.Add(this.buttonModuleStoreInfo);
             this.groupBox3.Controls.Add(this.labelModuleID);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.textBoxModuleId);
+            this.groupBox3.Controls.Add(this.textBoxModuleName);
+            this.groupBox3.Controls.Add(this.textBoxDesc);
             this.groupBox3.Controls.Add(this.labelModuleLink);
-            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.textBoxLink);
             this.groupBox3.Controls.Add(this.labelModuleName);
             this.groupBox3.Controls.Add(this.labelModuleDiscription);
             this.groupBox3.Location = new System.Drawing.Point(408, 18);
@@ -316,35 +343,99 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Modules";
             // 
+            // buttonModuleDelete
+            // 
+            this.buttonModuleDelete.Location = new System.Drawing.Point(244, 237);
+            this.buttonModuleDelete.Name = "buttonModuleDelete";
+            this.buttonModuleDelete.Size = new System.Drawing.Size(109, 29);
+            this.buttonModuleDelete.TabIndex = 24;
+            this.buttonModuleDelete.Text = "Delete";
+            this.buttonModuleDelete.UseVisualStyleBackColor = true;
+            // 
+            // buttonModuleUpdate
+            // 
+            this.buttonModuleUpdate.Location = new System.Drawing.Point(127, 237);
+            this.buttonModuleUpdate.Name = "buttonModuleUpdate";
+            this.buttonModuleUpdate.Size = new System.Drawing.Size(109, 29);
+            this.buttonModuleUpdate.TabIndex = 23;
+            this.buttonModuleUpdate.Text = "Update";
+            this.buttonModuleUpdate.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.buttonModuleSearch);
+            this.groupBox2.Location = new System.Drawing.Point(6, 266);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(350, 48);
+            this.groupBox2.TabIndex = 19;
+            this.groupBox2.TabStop = false;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(70, 18);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(191, 20);
+            this.textBox6.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Module ID";
+            // 
+            // buttonModuleSearch
+            // 
+            this.buttonModuleSearch.Location = new System.Drawing.Point(267, 13);
+            this.buttonModuleSearch.Name = "buttonModuleSearch";
+            this.buttonModuleSearch.Size = new System.Drawing.Size(77, 29);
+            this.buttonModuleSearch.TabIndex = 11;
+            this.buttonModuleSearch.Text = "Search";
+            this.buttonModuleSearch.UseVisualStyleBackColor = true;
+            // 
+            // buttonModuleStoreInfo
+            // 
+            this.buttonModuleStoreInfo.Location = new System.Drawing.Point(9, 237);
+            this.buttonModuleStoreInfo.Name = "buttonModuleStoreInfo";
+            this.buttonModuleStoreInfo.Size = new System.Drawing.Size(109, 29);
+            this.buttonModuleStoreInfo.TabIndex = 22;
+            this.buttonModuleStoreInfo.Text = "Create";
+            this.buttonModuleStoreInfo.UseVisualStyleBackColor = true;
+            this.buttonModuleStoreInfo.Click += new System.EventHandler(this.buttonModuleStoreInfo_Click);
+            // 
             // labelModuleID
             // 
             this.labelModuleID.AutoSize = true;
             this.labelModuleID.Location = new System.Drawing.Point(14, 26);
             this.labelModuleID.Name = "labelModuleID";
-            this.labelModuleID.Size = new System.Drawing.Size(56, 13);
+            this.labelModuleID.Size = new System.Drawing.Size(70, 13);
             this.labelModuleID.TabIndex = 0;
-            this.labelModuleID.Text = "Module ID";
+            this.labelModuleID.Text = "Module Code";
             // 
-            // textBox1
+            // textBoxModuleId
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxModuleId.Location = new System.Drawing.Point(127, 23);
+            this.textBoxModuleId.Name = "textBoxModuleId";
+            this.textBoxModuleId.Size = new System.Drawing.Size(215, 20);
+            this.textBoxModuleId.TabIndex = 1;
             // 
-            // textBox3
+            // textBoxModuleName
             // 
-            this.textBox3.Location = new System.Drawing.Point(127, 51);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(215, 20);
-            this.textBox3.TabIndex = 6;
+            this.textBoxModuleName.Location = new System.Drawing.Point(127, 51);
+            this.textBoxModuleName.Name = "textBoxModuleName";
+            this.textBoxModuleName.Size = new System.Drawing.Size(215, 20);
+            this.textBoxModuleName.TabIndex = 6;
             // 
-            // textBox4
+            // textBoxDesc
             // 
-            this.textBox4.Location = new System.Drawing.Point(127, 77);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(215, 20);
-            this.textBox4.TabIndex = 7;
+            this.textBoxDesc.Location = new System.Drawing.Point(127, 77);
+            this.textBoxDesc.Name = "textBoxDesc";
+            this.textBoxDesc.Size = new System.Drawing.Size(215, 20);
+            this.textBoxDesc.TabIndex = 7;
             // 
             // labelModuleLink
             // 
@@ -355,12 +446,12 @@
             this.labelModuleLink.TabIndex = 18;
             this.labelModuleLink.Text = "Resource Link";
             // 
-            // textBox5
+            // textBoxLink
             // 
-            this.textBox5.Location = new System.Drawing.Point(127, 103);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(215, 20);
-            this.textBox5.TabIndex = 8;
+            this.textBoxLink.Location = new System.Drawing.Point(127, 103);
+            this.textBoxLink.Name = "textBoxLink";
+            this.textBoxLink.Size = new System.Drawing.Size(215, 20);
+            this.textBoxLink.TabIndex = 8;
             // 
             // labelModuleName
             // 
@@ -388,96 +479,7 @@
             this.buttonMuduleViewAll.TabIndex = 25;
             this.buttonMuduleViewAll.Text = "Display Modules";
             this.buttonMuduleViewAll.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.buttonModuleSearch);
-            this.groupBox2.Location = new System.Drawing.Point(6, 266);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(350, 48);
-            this.groupBox2.TabIndex = 19;
-            this.groupBox2.TabStop = false;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.buttonStudentSearch);
-            this.groupBox4.Location = new System.Drawing.Point(6, 266);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(350, 48);
-            this.groupBox4.TabIndex = 20;
-            this.groupBox4.TabStop = false;
-            // 
-            // buttonModuleSearch
-            // 
-            this.buttonModuleSearch.Location = new System.Drawing.Point(267, 13);
-            this.buttonModuleSearch.Name = "buttonModuleSearch";
-            this.buttonModuleSearch.Size = new System.Drawing.Size(77, 29);
-            this.buttonModuleSearch.TabIndex = 11;
-            this.buttonModuleSearch.Text = "Search";
-            this.buttonModuleSearch.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Student ID";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(72, 18);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 20);
-            this.textBox2.TabIndex = 23;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Module ID";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(70, 18);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(191, 20);
-            this.textBox6.TabIndex = 20;
-            // 
-            // buttonModuleDelete
-            // 
-            this.buttonModuleDelete.Location = new System.Drawing.Point(244, 237);
-            this.buttonModuleDelete.Name = "buttonModuleDelete";
-            this.buttonModuleDelete.Size = new System.Drawing.Size(109, 29);
-            this.buttonModuleDelete.TabIndex = 24;
-            this.buttonModuleDelete.Text = "Delete";
-            this.buttonModuleDelete.UseVisualStyleBackColor = true;
-            // 
-            // buttonModuleUpdate
-            // 
-            this.buttonModuleUpdate.Location = new System.Drawing.Point(127, 237);
-            this.buttonModuleUpdate.Name = "buttonModuleUpdate";
-            this.buttonModuleUpdate.Size = new System.Drawing.Size(109, 29);
-            this.buttonModuleUpdate.TabIndex = 23;
-            this.buttonModuleUpdate.Text = "Update";
-            this.buttonModuleUpdate.UseVisualStyleBackColor = true;
-            // 
-            // buttonModuleStoreInfo
-            // 
-            this.buttonModuleStoreInfo.Location = new System.Drawing.Point(9, 237);
-            this.buttonModuleStoreInfo.Name = "buttonModuleStoreInfo";
-            this.buttonModuleStoreInfo.Size = new System.Drawing.Size(109, 29);
-            this.buttonModuleStoreInfo.TabIndex = 22;
-            this.buttonModuleStoreInfo.Text = "Create";
-            this.buttonModuleStoreInfo.UseVisualStyleBackColor = true;
+            this.buttonMuduleViewAll.Click += new System.EventHandler(this.buttonMuduleViewAll_Click);
             // 
             // FormDataCapture
             // 
@@ -496,12 +498,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplay)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -533,11 +535,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label labelModuleID;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxModuleId;
+        private System.Windows.Forms.TextBox textBoxModuleName;
+        private System.Windows.Forms.TextBox textBoxDesc;
         private System.Windows.Forms.Label labelModuleLink;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxLink;
         private System.Windows.Forms.Label labelModuleName;
         private System.Windows.Forms.Label labelModuleDiscription;
         private System.Windows.Forms.Button buttonMuduleViewAll;

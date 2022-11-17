@@ -41,15 +41,47 @@ namespace Runtime_Terror
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void buttonDisplay_Click(object sender, EventArgs e)
+        private void buttonStudentsViewAll_Click(object sender, EventArgs e) // Display all students.
         {
             try
             {
+                string query = "SELECT * FROM Student";
                 DataHandler handler = new DataHandler();
-                DataTable dt = handler.Display();
+                DataTable dt = handler.Display(query);
                 dgvDisplay.DataSource = dt;
-                
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        
+        private void buttonMuduleViewAll_Click(object sender, EventArgs e) // Display all modules
+        {
+            try
+            {
+                string query = "SELECT * FROM Modules";
+                DataHandler handler = new DataHandler();
+                DataTable dt = handler.Display(query);
+                dgvDisplay.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void buttonModuleStoreInfo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string dob = dateTimePickerStudentDOB.Value.ToString("yyyy-MM-dd");
+                Module newModule = new Module(textBoxModuleId.Text, textBoxModuleName.Text, textBoxDesc.Text, textBoxLink.Text);
+                DataHandler addModule = new DataHandler();
+                addModule.StoreInformation(newModule);
             }
             catch (Exception ex)
             {
