@@ -53,12 +53,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxSearchStudent = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonModuleDelete = new System.Windows.Forms.Button();
             this.buttonModuleUpdate = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxModuleSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonModuleSearch = new System.Windows.Forms.Button();
             this.buttonModuleStoreInfo = new System.Windows.Forms.Button();
@@ -167,6 +167,7 @@
             this.buttonStudentSearch.TabIndex = 10;
             this.buttonStudentSearch.Text = "Search";
             this.buttonStudentSearch.UseVisualStyleBackColor = true;
+            this.buttonStudentSearch.Click += new System.EventHandler(this.buttonStudentSearch_Click);
             // 
             // buttonStudentUpdate
             // 
@@ -298,7 +299,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.textBoxSearchStudent);
             this.groupBox4.Controls.Add(this.buttonStudentSearch);
             this.groupBox4.Location = new System.Drawing.Point(6, 266);
             this.groupBox4.Name = "groupBox4";
@@ -315,12 +316,12 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Student ID";
             // 
-            // textBox2
+            // textBoxSearchStudent
             // 
-            this.textBox2.Location = new System.Drawing.Point(72, 18);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 20);
-            this.textBox2.TabIndex = 23;
+            this.textBoxSearchStudent.Location = new System.Drawing.Point(72, 18);
+            this.textBoxSearchStudent.Name = "textBoxSearchStudent";
+            this.textBoxSearchStudent.Size = new System.Drawing.Size(189, 20);
+            this.textBoxSearchStudent.TabIndex = 23;
             // 
             // groupBox3
             // 
@@ -351,6 +352,7 @@
             this.buttonModuleDelete.TabIndex = 24;
             this.buttonModuleDelete.Text = "Delete";
             this.buttonModuleDelete.UseVisualStyleBackColor = true;
+            this.buttonModuleDelete.Click += new System.EventHandler(this.buttonModuleDelete_Click);
             // 
             // buttonModuleUpdate
             // 
@@ -360,10 +362,11 @@
             this.buttonModuleUpdate.TabIndex = 23;
             this.buttonModuleUpdate.Text = "Update";
             this.buttonModuleUpdate.UseVisualStyleBackColor = true;
+            this.buttonModuleUpdate.Click += new System.EventHandler(this.buttonModuleUpdate_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.textBoxModuleSearch);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.buttonModuleSearch);
             this.groupBox2.Location = new System.Drawing.Point(6, 266);
@@ -372,12 +375,12 @@
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             // 
-            // textBox6
+            // textBoxModuleSearch
             // 
-            this.textBox6.Location = new System.Drawing.Point(70, 18);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(191, 20);
-            this.textBox6.TabIndex = 20;
+            this.textBoxModuleSearch.Location = new System.Drawing.Point(70, 18);
+            this.textBoxModuleSearch.Name = "textBoxModuleSearch";
+            this.textBoxModuleSearch.Size = new System.Drawing.Size(191, 20);
+            this.textBoxModuleSearch.TabIndex = 20;
             // 
             // label2
             // 
@@ -396,6 +399,7 @@
             this.buttonModuleSearch.TabIndex = 11;
             this.buttonModuleSearch.Text = "Search";
             this.buttonModuleSearch.UseVisualStyleBackColor = true;
+            this.buttonModuleSearch.Click += new System.EventHandler(this.buttonModuleSearch_Click);
             // 
             // buttonModuleStoreInfo
             // 
@@ -545,9 +549,9 @@
         private System.Windows.Forms.Button buttonMuduleViewAll;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxSearchStudent;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxModuleSearch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonModuleSearch;
         private System.Windows.Forms.Button buttonModuleDelete;

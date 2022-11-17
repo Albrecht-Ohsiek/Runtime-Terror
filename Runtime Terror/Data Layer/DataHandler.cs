@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Runtime_Terror
 {
@@ -24,7 +25,7 @@ namespace Runtime_Terror
 
         }
 
-        public void StoreInformation(Student student) // Storing a new student.
+        public void StoreInformation(Student student) // Student Create.
         {          
             openConnection();          
             try
@@ -55,7 +56,7 @@ namespace Runtime_Terror
 
         }
         
-        public void StoreInformation(Module module) // Storing a new module.
+        public void StoreInformation(Module module) // Module Create.
         {
             openConnection();
             try
@@ -101,7 +102,7 @@ namespace Runtime_Terror
             }
         }
 
-        public void Update(Student student)
+        public void Update(Student student) // Student Update
         {
             openConnection();
 
@@ -131,11 +132,10 @@ namespace Runtime_Terror
             {
                 myConnection.Close();
             }
-
-
+            
         }
 
-        public void Delete(Student student)
+        public void Delete(Student student) // Student Delete
         {
             openConnection();
             try
@@ -159,7 +159,59 @@ namespace Runtime_Terror
             }
 
         }
-        
+        public void Update(Module updatedModule) // Module Update
+        {
+            openConnection();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spUpdateModule", myConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@ModuleCode", SqlDbType.VarChar).Value = updatedModule.Code;
+                cmd.Parameters.Add("@ModuleName", SqlDbType.VarChar).Value = updatedModule.Name;
+                cmd.Parameters.Add("@ModuleDescription", SqlDbType.VarChar).Value = updatedModule.Description;
+                cmd.Parameters.Add("@ExternalResources", SqlDbType.VarChar).Value = updatedModule.Resources;
+
+                cmd.ExecuteNonQuery();
+                
+                MessageBox.Show("Module updated successfully");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                myConnection.Close();
+            }
+
+        }
+        public void Delete(string moduleCode) // Module Delete
+        {
+            openConnection();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("spDeleteModule", myConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@ModuleCode", SqlDbType.VarChar).Value = moduleCode;
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Module deleted successfully");
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                myConnection.Close();
+            }
+
+        }
+
         public DataTable Display(string query)
         {
             openConnection();
@@ -172,9 +224,95 @@ namespace Runtime_Terror
             myConnection.Close();
             
             return dt;
+        }
+        
+        public DataTable Search(string formInfo)
+        {
+            openConnection();
+
+            try
+            {
+                SqlDataAdapter dataAdapter = new SqlDataAdapter("select * from Student where StudentId ='" + formInfo + "'", myConnection);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                return dataTable;
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                myConnection.Close();
+
+            }
+        }
+        
+        public DataTable searchModule(string formInfo)
+        {
+            openConnection();
+
+            try
+            {
+                SqlDataAdapter dataAdapter = new SqlDataAdapter("select * from Modules where ModuleCode ='" + formInfo + "'", myConnection);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                return dataTable;
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                myConnection.Close();
+
+            }
+        }
+
+        public Boolean EntryExists(string id, string table) // Checking if data entry exists before update or delete.
+        {
+            openConnection();
+            try
+            {
+                if (table == "Student")
+                {
+                    SqlCommand cmd = new SqlCommand("SELECT StudentId FROM Student WHERE StudentId = @StudentId", myConnection);
+                    cmd.Parameters.Add("@StudentId", SqlDbType.Int).Value = id;
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    
+                    return reader.HasRows ? true : false;
+                }
+                else if(table == "Modules")
+                {
+                    SqlCommand cmd = new SqlCommand("SELECT ModuleCode FROM Modules WHERE ModuleCode = @ModuleCode", myConnection);
+                    cmd.Parameters.Add("@ModuleCode", SqlDbType.VarChar).Value = id;
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    
+                    return reader.HasRows ? true : false;
+                }
+                else
+                {
+                    return false;
+                }
+                
+            }
+            catch(SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                
+                myConnection.Close();
+            }
             
         }
-            
     }
 
 }
