@@ -31,8 +31,8 @@ namespace Runtime_Terror
         {
             try
             {
-                string dob = dateTimePickerDOB.Value.ToString("yyyy-MM-dd");
-                Student newStudent = new Student(int.Parse(textBoxStudentID.Text), textBoxName.Text, textBoxLastName.Text, comboBoxGender.Text, dob, int.Parse(textBoxPhoneNum.Text), textBoxEmail.Text, textBoxModule.Text);
+                string dob = dateTimePickerStudentDOB.Value.ToString("yyyy-MM-dd");
+                Student newStudent = new Student(int.Parse(textBoxStudentID.Text), textBoxStudentName.Text, textBoxStudentLastName.Text, comboBoxStudentGender.Text, dob, int.Parse(textBoxStudentPhoneNum.Text), textBoxStudentEmail.Text, textBoxStudentModule.Text);
                 DataHandler addStudent = new DataHandler();
                 addStudent.StoreInformation(newStudent);
             }
