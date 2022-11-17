@@ -75,7 +75,7 @@ namespace Runtime_Terror
 
         private void buttonModuleSearch_Click(object sender, EventArgs e)
         {
-            string ModuleID = textBoxSearchStudent.Text;
+            string ModuleID = textBoxModuleSearch.Text;
             DataHandler searchModule = new DataHandler();
             DataTable dt = searchModule.searchModule(ModuleID);
             dgvDisplay.DataSource = dt;
