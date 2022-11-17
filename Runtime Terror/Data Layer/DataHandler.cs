@@ -75,13 +75,27 @@ namespace Runtime_Terror
             }
         }
 
-        public void Update()
+        public void Update(Student student)
         {
             openConnection();
 
             try
             {
+                SqlCommand cmd = new SqlCommand("spUpdate", myConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
 
+                cmd.Parameters.Add("@StudentId", SqlDbType.Int).Value = student.StdNumber;
+                cmd.Parameters.Add("@Name", SqlDbType.VarChar).Value = student.Name;
+                cmd.Parameters.Add("@Surname", SqlDbType.VarChar).Value = student.Surname;
+                cmd.Parameters.Add("@DOB", SqlDbType.VarChar).Value = student.Dob;
+                cmd.Parameters.Add("@Gender", SqlDbType.VarChar).Value = student.Gender;
+                cmd.Parameters.Add("@Phone", SqlDbType.Int).Value = student.Phone;
+                cmd.Parameters.Add("@Email", SqlDbType.VarChar).Value = student.Email;
+                cmd.Parameters.Add("@ModuleCodes", SqlDbType.VarChar).Value = student.ModuleCodes;
+
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Student updated successfully");
             }
             catch (SqlException ex)
             {
@@ -95,12 +109,19 @@ namespace Runtime_Terror
 
         }
 
-        public void Delete()
+        public void Delete(Student student)
         {
             openConnection();
             try
             {
-                
+             SqlCommand cmd = new SqlCommand("spDelete", myConnection);
+             cmd.CommandType = CommandType.StoredProcedure;
+
+             cmd.Parameters.Add("@StudentId", SqlDbType.Int).Value = student.StdNumber;
+
+             cmd.ExecuteNonQuery();
+             MessageBox.Show("Student deleted successfully");
+
             }
             catch (SqlException ex)
             {
@@ -132,3 +153,16 @@ namespace Runtime_Terror
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+    
