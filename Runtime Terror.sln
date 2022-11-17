@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runtime Terror", "Runtime Terror.csproj", "{878ACDCE-66D7-4DBD-86E1-4386CAC1B19B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{878ACDCE-66D7-4DBD-86E1-4386CAC1B19B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{878ACDCE-66D7-4DBD-86E1-4386CAC1B19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{878ACDCE-66D7-4DBD-86E1-4386CAC1B19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{878ACDCE-66D7-4DBD-86E1-4386CAC1B19B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AA64288-8C7A-40EF-BD3B-273B16C0ADA4}
+	EndGlobalSection
+EndGlobal
