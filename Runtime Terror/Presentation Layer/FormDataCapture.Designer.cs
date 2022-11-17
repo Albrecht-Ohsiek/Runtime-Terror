@@ -50,6 +50,7 @@
             this.textBoxStudentPhoneNum = new System.Windows.Forms.TextBox();
             this.labelStudentGender = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxStudentModule = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSearchStudent = new System.Windows.Forms.TextBox();
@@ -70,7 +71,6 @@
             this.labelModuleName = new System.Windows.Forms.Label();
             this.labelModuleDiscription = new System.Windows.Forms.Label();
             this.buttonMuduleViewAll = new System.Windows.Forms.Button();
-            this.comboBoxStudentModule = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplay)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -291,6 +291,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Students";
             // 
+            // comboBoxStudentModule
+            // 
+            this.comboBoxStudentModule.FormattingEnabled = true;
+            this.comboBoxStudentModule.Location = new System.Drawing.Point(127, 208);
+            this.comboBoxStudentModule.Name = "comboBoxStudentModule";
+            this.comboBoxStudentModule.Size = new System.Drawing.Size(181, 21);
+            this.comboBoxStudentModule.TabIndex = 8;
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label1);
@@ -480,14 +488,6 @@
             this.buttonMuduleViewAll.UseVisualStyleBackColor = true;
             this.buttonMuduleViewAll.Click += new System.EventHandler(this.buttonMuduleViewAll_Click);
             // 
-            // comboBoxStudentModule
-            // 
-            this.comboBoxStudentModule.FormattingEnabled = true;
-            this.comboBoxStudentModule.Location = new System.Drawing.Point(127, 208);
-            this.comboBoxStudentModule.Name = "comboBoxStudentModule";
-            this.comboBoxStudentModule.Size = new System.Drawing.Size(181, 21);
-            this.comboBoxStudentModule.TabIndex = 8;
-            // 
             // FormDataCapture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,7 +499,7 @@
             this.Controls.Add(this.buttonStudentsViewAll);
             this.Controls.Add(this.dgvDisplay);
             this.Name = "FormDataCapture";
-            this.Text = "Form2DataCapture";
+            this.Text = "Belgium Campus Student Information Wizard - Runtime Terror";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDataCapture_FormClosed);
             this.Load += new System.EventHandler(this.FormDataCapture_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDisplay)).EndInit();
